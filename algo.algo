@@ -1,25 +1,23 @@
 // step one: Get the exact length of the sentence character
-
 ALGORITHM sentence_checking (sentence: STRING)
 VAR
 // counter declarations
-  char_counter, word_counter, vowel_counter, i, space_counter :INTEGER := 0
+  char_counter, total_char_counter, word_counter, vowel_counter, i, space_counter :INTEGER := 0
   sentence: STRING
-
 BEGIN
-Read(sentence)
+sentence = Read(sentence)
 
 IF (sentence.indexOf(-1) == ".") THEN
   // looping through each sentences to check the values
   WHILE (i < sentence.length ) DO
     
     IF (sentence[i] = " ") THEN
-    space_counter = space_counter + 1
+        space_counter = space_counter + 1
     ELSE
         char_counter = char_counter + 1
     END_IF
 
-  // check for characters that are equal to vowels
+    // check for characters that are equal to vowels
     SWITCH (sentence[i]) DO
       case "a" or "A": vowel_counter = vowel_counter + 1; BREAK;
       case "e" or "E": vowel_counter = vowel_counter + 1; BREAK;
@@ -33,9 +31,10 @@ IF (sentence.indexOf(-1) == ".") THEN
   END_WHILE
   // to get the number of words in the sentence, assign the word counter to space counter + 1
   word_counter = space_counter + 1
+  total_char_counter = char_counter + space_counter
   // //////////////
 
-  Write(char_counter);
+  Write(total_char_counter);
   Write(word_counter);
   Write(vowel_counter);
 
