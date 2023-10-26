@@ -1,14 +1,17 @@
 # An Algorithm that reads a sentence, which ends with a point, character by character, and determines:
+
 1. The length of the sentence (the number of characters).
 2. The number of words in the sentence (assuming that the words are separated by a single space).
 3. The number of vowels in the sentence
 
 # Conditions and Assumptions
+
 1. Each character was treated separately.
 2. The last character is a point.
 3. Three variables was used as counters.
 
 # Implementation
+
 1. Lines 1 - 2 declares the name of the algorithm and the input "sentence" a string that it recieves.
 2. Lines 3 - 6 declares variables for the counters and the sentence.
 3. Lines 7 "begins" the logic.
@@ -20,7 +23,7 @@
 9. Lines 16 breaks out of lines 14 if the condition is not met.
 10. Lines 17 increments char_counter if the condition in lines 14 is not met.
 11. Lines 18 ends the if statement from lines 14.
-12. Lines 21 - 26 checks the current character if it is a vowel ("a", "A", "e", "E", "i", "I", "o", "O", "u", "U".
+12. Lines 21 - 26 checks the current character if it is a vowel ("a", "A", "e", "E", "i", "I", "o", "O", "u", "U")
 13. Lines 27 increaments the vowel_couunter if the switch case statement picks up a vowel.
 14. Lines 28 end the switch statement.
 15. Lines 30 increaments i (sentence length) being parsed as index for the while do loop.
